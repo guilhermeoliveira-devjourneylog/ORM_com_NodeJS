@@ -1,12 +1,23 @@
 'use strict';
+const {
+  Model
+} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  const Matriculas = sequelize.define('Matriculas', {
+  class Matriculas extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+    }
+  }
+  Matriculas.init({
     status: DataTypes.STRING
-  }, {});
-  Matriculas.associate = function(models) {
-    Matriculas.belongsTo(models.Pessoas)
-    Matriculas.belongsTo(models.Turmas)
-
-  };
+  }, {
+    sequelize,
+    modelName: 'Matriculas',
+  });
   return Matriculas;
 };

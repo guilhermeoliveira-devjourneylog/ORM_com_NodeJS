@@ -3,14 +3,19 @@
 ```npm init -y```
 ```npm run start```
 ```npm install mysql2```
-```npm instal sequelize```
-```npm instal sequelize sequelize-cli path```
+```npm install sequelize```
+```npm install sequelize sequelize-cli path```
 ```npx sequelize-cli init```
 ```npx sequelize-cli model:create --name Pessoas --attributes nome:string,ativo:boolean,email:string,role:string```
 ```npx sequelize-cli db:migrate```
 ```npx sequelize-cli seed:generate --name demo-pessoa```
 ```npx sequelize-cli db:seed:all```
-
+```npx sequelize-cli model:create --name Niveis --attributes descr_nivel:string```
+```npx sequelize-cli model:create --name Turmas --attributes data_inicio:dateonly```
+```npx sequelize-cli model:create --name Matriculas --attributes status:string```
+npx sequelize-cli seed:generate --name demo-nivel
+npx sequelize-cli seed:generate --name demo-turmas
+npx sequelize-cli seed:generate --name demo-matriculas
 ### Desfazendo operações
 ```npx sequelize-cli db:migrate:undo```
 
