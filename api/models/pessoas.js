@@ -1,11 +1,11 @@
-'use strict';
+'use strict'
 module.exports = (sequelize, DataTypes) => {
   const Pessoas = sequelize.define('Pessoas', {
     nome: DataTypes.STRING,
     ativo: DataTypes.BOOLEAN,
     email: DataTypes.STRING,
     role: DataTypes.STRING
-  }, {});
+  }, { paranoid: true })
   Pessoas.associate = function(models) {
     Pessoas.hasMany(models.Turmas, {
       foreignKey: 'docente_id'
@@ -14,6 +14,6 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'estudante_id'
     })
 
-  };
-  return Pessoas;
-};
+  }
+  return Pessoas
+}

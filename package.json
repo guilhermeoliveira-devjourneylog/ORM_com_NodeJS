@@ -2,9 +2,10 @@
   "name": "orm-com-nodejs",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./api/index.js",
   "scripts": {
-    "start": "nodemon ./api/index.js",
+    "lint": "eslint api --fix",
+    "start": "nodemon ./api/index.js \"npm run lint\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -19,6 +20,7 @@
     "sequelize-cli": "^6.6.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "eslint": "^7.4.0",
+    "nodemon": "^2.0.4"
   }
 }
