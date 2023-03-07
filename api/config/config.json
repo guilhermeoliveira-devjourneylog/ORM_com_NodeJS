@@ -4,8 +4,7 @@
     "password": "Dev-317297",
     "database": "escola_ingles",
     "host": "127.0.0.1",
-    "dialect": "mysql",
-    "OperatorsAliases": false
+    "dialect": "mysql"
   },
   "test": {
     "username": "root",
